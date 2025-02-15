@@ -1,0 +1,58 @@
+**Prerequisites:**
+
+Before you can run the tests, ensure that the following are installed on your machine:
+
+Node.js: Version 16 or above.
+Playwright: The Playwright testing framework.
+TypeScript: Required to work with TypeScript-based tests.
+
+**Installation:**
+
+1. **Install Dependencies**
+   Inside the project directory, install the required dependencies using npm (Node Package Manager):
+
+`npm install`
+
+2. **Install Playwright Browsers**
+   To use Playwright for browser automation, you need to install the necessary browser binaries. Run the following command to install them:
+
+`npx playwright install`
+
+**Usage:**
+
+1. **Running the Tests**
+   You can run the Playwright tests using the following command (This will execute all the tests inside the tests folder):
+
+`npx playwright test`
+
+2. **Running Specific Test Files**
+   If you want to run a specific test file, use the following command:
+
+Example:
+`npx playwright test tests/stock-images.spec.ts`
+
+3. **Running Tests in Specific Browsers**
+   **A.** If you want to run tests in a specific browser, use:
+
+Example:
+`npx playwright test --project=chromium`
+
+**B.** If you want to run a specific test file in Chromium, use the following command:
+
+Example:
+`npx playwright test tests/email-login.spec.ts --project=chromium`
+
+**C.** If you want to run a specific test case within a test file, use the -g or --grep option with the name of the test case:
+
+Example:
+`npx playwright test tests/email-login.spec.ts -g "Login with valid credentials" --project=chromium`
+
+4. **Headless and Headful Mode**
+   Playwright runs tests in headless mode by default, meaning the browser runs without a UI. To run the tests in headful mode (with a visible browser window), add the --headed flag:
+
+`npx playwright test --headed`
+
+5. **Running Tests with Debugging Enabled**
+   If you want to debug a specific test or see more detailed logs, you can use (This will pause the tests at the point of failure, allowing you to inspect the browser's state):
+
+`npx playwright test --debug`

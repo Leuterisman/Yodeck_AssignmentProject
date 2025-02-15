@@ -24,15 +24,7 @@ export const TestData = {
   invalidUrl: "https://www.google.com",
   searchKeyword: "Forest",
   validName: "Test Image",
-  minDuration: 1,
-  maxDuration: 99999,
 
-  filters: {
-    provider: "Pixabay",
-    orientation: "Landscape",
-    assetType: "Photo",
-    category: "Nature",
-  },
   searchErrorMessages: {
     emptyKeyword: "Type something to search for images",
   },
