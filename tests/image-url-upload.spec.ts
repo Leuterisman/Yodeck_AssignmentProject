@@ -57,7 +57,6 @@ test.describe("Image Upload Tests", () => {
     // Enter URLs in all fields
     await imagePage.enterImageUrl(TestData.validUrls[0], 0);
     await imagePage.enterImageUrl(TestData.validUrls[1], 1);
-
     await imagePage.clickUpload();
     await imagePage.clickSave();
   });

@@ -26,7 +26,6 @@ test.describe("Stock Images Tests", () => {
     await loginPage.clickContinue();
     await loginPage.enterPassword(TestData.validUser.password);
     await loginPage.clickLogin();
-
     await imagePage.openAddImageModal();
     await imagePage.switchToStockImages();
   });

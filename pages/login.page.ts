@@ -1,7 +1,7 @@
 import { Page, expect } from "@playwright/test";
 
 /**
- * This class encapsulates actions related to logging into the application, including
+ * This class includes actions related to logging into the application, including
  * entering login credentials, handling error messages, and navigating through password
  * recovery options. It provides methods to interact with the login page elements.
  */

@@ -2,7 +2,7 @@ import { Page, expect } from "@playwright/test";
 
 /**
  * This class represents the image-related actions on a webpage, including uploading images
- * from a URL, searching for stock images, and applying filters. It encapsulates the locators
+ * from a URL, searching for stock images, and applying filters. It includes the locators
  * and methods to interact with the image upload and stock image functionalities.
  */
 export class ImagePage {
@@ -10,15 +10,15 @@ export class ImagePage {
 
   // Media-upload Locators
   private mediaDropdown = "a.dropdown-toggle .menu-text";
-  private imagesDropdown = 'a[href="#main/image"] .menu-text';
+  private imagesDropdown = "a[href='#main/image'] .menu-text";
   private addImageBtn = "button.openGallery.primary-button.button-mrg-right";
   private urlTab =
     "a.nav-link[data-target='#import_image_from_url'][role='tab']";
   private urlInput =
-    'input.form-control.import-url-input[name="import-image-url"]';
-  private addUrlBtn = 'span.bbf-add.add-new-url-input[data-rel="tooltip"]';
+    "input.form-control.import-url-input[name='import-image-url']";
+  private addUrlBtn = "span.bbf-add.add-new-url-input[data-rel='tooltip']";
   private uploadBtn =
-    'button.primary-button.button-mrg-left[data-bb-handler="confirm"]';
+    "button.primary-button.button-mrg-left[data-bb-handler='confirm']";
   private saveBtn = "button.submit-model.primary-button";
   private nameInput =
     "input.form-control[name='name'][placeholder='Enter Name']";
@@ -27,18 +27,18 @@ export class ImagePage {
   private stockTab =
     "label#stock_image_label.source-button.image-source-button.btn.images.btn-primary.stock-image-gallery";
   private searchInput =
-    'input.form-control.photo-search-query.inline[placeholder="Keywords"]';
-  private searchBtn = 'button:has-text("Search")';
+    "input.form-control.photo-search-query.inline[placeholder='Keywords']";
+  private searchBtn = "button:has-text('Search')";
   private filterBtn = "span.filter-button";
   private providerDropdown = "span.select2-selection.select2-selection--single";
   private providerOption = "li#select2-p2la-result-4g3x-pexels";
   private orientationDropdown =
-    'span.select2-selection__rendered#select2-vln2-container[role="textbox"][title="Any Orientation"]';
+    "span.select2-selection__rendered#select2-vln2-container[role='textbox'][title='Any Orientation']";
   private orientationOption =
-    'li.select2-results__option.select2-results__option--highlighted[id^="select2-"][id$="-result-dq8x-landscape"]';
+    "li.select2-results__option.select2-results__option--highlighted[id^='select2-'][id$='-result-dq8x-landscape']";
   private imageResults = "div.title:has-text('Entering another dimension...')";
   private selectBtn =
-    'button.tertiary-button-light.button-mrg-right[data-button-handler="select"]';
+    "button.tertiary-button-light.button-mrg-right[data-button-handler='select']";
   private emptyKeywordErrorMessage = "div[data-error='stock-image']";
 
   /**
@@ -53,7 +53,7 @@ export class ImagePage {
   // Media-upload Methods
 
   /**
-   * Opens the modal to add a new image by navigating through the dropdowns.
+   * Opens the modal to add a new image by navigating through the dropdown menu.
    */
   async openAddImageModal() {
     await this.page.click(this.mediaDropdown);
