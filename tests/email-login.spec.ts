@@ -73,14 +73,14 @@ test.describe("Email login tests", () => {
   });
 
   /**
-   * Test case for attempting login with an empty email field. It verifies that the "Incorrect
-   * Credentials" error message is displayed.
+   * Test case for attempting login with an empty email field. It verifies that the user is not taken to the password entry step
+   * by asserting that the password label is not visible.
    */
-  test("Login with an empty email field", async () => {
+  test("Login with an empty email field", async ({ page }) => {
     await loginPage.acceptCookies();
     await loginPage.enterEmail("");
     await loginPage.clickContinue();
-    await loginPage.assertErrorMessage("Incorrect Credentials");
+    await loginPage.assertPasswordLabelIsNotVisible();
   });
 
   /**

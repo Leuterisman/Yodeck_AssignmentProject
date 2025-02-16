@@ -14,6 +14,7 @@ export class LoginPage {
   private passwordInput = "input[placeholder='Insert your Password']";
   private loginBtn = "button#login_button";
   private errorMessage = "h5.error-message.password_error.error";
+  private passwordLabel = "label[for='password']";
   private passwordVisibilityToggle = "i#show_pass";
   private forgotPasswordLink = "a.forgot-password-link";
   private changeEmailLink = "a.change-email-link.change_email";
@@ -108,6 +109,10 @@ export class LoginPage {
       "type",
       type
     );
+  }
+
+  async assertPasswordLabelIsNotVisible() {
+    await expect(this.page.locator(this.passwordLabel)).toBeHidden();
   }
 
   /**
